@@ -4,6 +4,8 @@
  * [1480] Running Sum of 1d Array
  */
 
+struct Solution;
+
 // @lc code=start
 impl Solution {
     pub fn running_sum(nums: Vec<i32>) -> Vec<i32> {

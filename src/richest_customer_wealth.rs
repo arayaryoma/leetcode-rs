@@ -4,6 +4,8 @@
  * [1672] Richest Customer Wealth
  */
 
+struct Solution;
+
 // @lc code=start
 impl Solution {
     pub fn maximum_wealth(accounts: Vec<Vec<i32>>) -> i32 {
