@@ -21,54 +21,24 @@ impl Solution {
                         result -= 1
                     }
                 }
-                'V' => {
-                    if let Some(&'I') | Some(&'V') | None = iter.peek() {
-                        result += 5
-                    } else {
-                        result -= 5
-                    }
-                }
+                'V' => result += 5,
                 'X' => {
-                    if let Some(&'I') | Some(&'V') | Some(&'X') | None = iter.peek() {
-                        result += 10
-                    } else {
+                    if let Some(&'L') | Some(&'C') = iter.peek() {
                         result -= 10
-                    }
-                }
-                'L' => {
-                    if let Some(&'I') | Some(&'V') | Some(&'X') | Some(&'L') | None = iter.peek() {
-                        result += 50
                     } else {
-                        result -= 50
+                        result += 10
                     }
                 }
+                'L' => result += 50,
                 'C' => {
-                    if let Some(&'I') | Some(&'V') | Some(&'X') | Some(&'L') | Some(&'C') | None =
-                        iter.peek()
-                    {
-                        result += 100
-                    } else {
+                    if let Some(&'D') | Some(&'M') = iter.peek() {
                         result -= 100
-                    }
-                }
-                'D' => {
-                    if let Some(&'I') | Some(&'V') | Some(&'X') | Some(&'L') | Some(&'C')
-                    | Some(&'D') | None = iter.peek()
-                    {
-                        result += 500
                     } else {
-                        result -= 500
+                        result += 100
                     }
                 }
-                'M' => {
-                    if let Some(&'I') | Some(&'V') | Some(&'X') | Some(&'L') | Some(&'C')
-                    | Some(&'D') | Some(&'M') | None = iter.peek()
-                    {
-                        result += 1000
-                    } else {
-                        result -= 1000
-                    }
-                }
+                'D' => result += 500,
+                'M' => result += 1000,
                 _ => (),
             }
         }
