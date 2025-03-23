@@ -31,3 +31,8 @@ impl Solution {
     }
 }
 // @lc code=end
+
+/*
+https://leetcode.com/problems/valid-parentheses/solutions/500491/rust-0ms/?source=vscode
+たしかに、マッチすべき閉じ括弧の方をstackに積んでいけばいいのか
+*/
