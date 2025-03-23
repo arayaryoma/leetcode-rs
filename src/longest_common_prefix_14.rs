@@ -4,6 +4,8 @@
  * [14] Longest Common Prefix
  */
 
+struct Solution;
+
 // @lc code=start
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
