@@ -27,7 +27,7 @@ impl Solution {
                 }
             }
             _ => false,
-        }) && stack.len() == 0
+        }) && stack.is_empty()
     }
 }
 // @lc code=end
